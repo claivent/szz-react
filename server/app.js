@@ -31,6 +31,9 @@ app.get("/*", (req, res) => {
   res.send("Unknown path!");
 });
 
+// Export Express app
+module.exports = app;
+
 //nastavení portu, na kterém má běžet HTTP server
 //app.listen(port, () => {
   //console.log(`Example app listening at http://localhost:${port}`);
