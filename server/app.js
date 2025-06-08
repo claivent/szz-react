@@ -10,12 +10,11 @@ const gradeRouter = require("./controller/grade-controller");
 //inicializace nového Express.js serveru
 const app = express();
 //definování portu, na kterém má aplikace běžet na localhostu
-const port = process.env.PORT || 8000;
+//const port = process.env.PORT || 8000;
 
 // Parsování body
 app.use(express.json()); // podpora pro application/json
 app.use(express.urlencoded({ extended: true })); // podpora pro application/x-www-form-urlencoded
-
 app.use(cors())
 
 //jednoduchá definice routy s HTTP metodou GET, která pouze navrací text
@@ -33,6 +32,6 @@ app.get("/*", (req, res) => {
 });
 
 //nastavení portu, na kterém má běžet HTTP server
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+//app.listen(port, () => {
+  //console.log(`Example app listening at http://localhost:${port}`);
+//});
