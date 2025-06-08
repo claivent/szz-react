@@ -20,7 +20,7 @@ function App() {
   let navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/classroom/list`, {
+    fetch(`${process.env.REACT_APP_API_URL}/classroom/list`, {
       method: "GET",
     }).then(async (response) => {
       const responseJson = await response.json();
